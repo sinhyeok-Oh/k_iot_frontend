@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+.dog-list li {
+  float: left;
+  padding: 0;
+  margin: 10px;
+  /* li가 가지는 크기외의 내용은 숨김 처리 */
+  overflow: hidden;
+}
+
+.dog-list img {
+  width: 300px;
+}
