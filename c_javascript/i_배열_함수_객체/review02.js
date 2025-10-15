@@ -8,7 +8,7 @@
 // 4) quantity - 사용자가 선택한 해당 상품의 수량 (숫자)
 
 /*
-- Cart
+- Cart 객체 예시 (리터럴)
 
 let product = {
   id: 1,
@@ -56,7 +56,7 @@ function displayCart() {
 function updateQuantity(id, quantity) {
   const idx = cart.findIndex(item => item.id === id);
 
-  // 상품이 존재하고 변결하 수량이 0보다 커야만 상품 업데이트 가능
+  // 상품이 존재하고 변결할 수량이 0보다 커야만 상품 업데이트 가능
   if (idx > -1 && quantity > 0) {
     // 업데이트
     cart[idx].quantity += quantity;
@@ -67,7 +67,7 @@ function updateQuantity(id, quantity) {
   displayCart();
 }
 // ? 4. 특정 상품 삭제
-function remoceFromCart(id) {
+function removeFromCart(id) {
   cart = cart.filter(item => item.id !== id); // 기존의 배열에 id의 객체가 제거된 배열로 재할당
   displayCart();
 }
@@ -98,7 +98,7 @@ updateQuantity(2, 4);
 
 addTocart(1, 'banana', 3000, 1);
 
-remoceFromCart(1);
+removeFromCart(1);
 
 addTocart(3, 'blueberry', 1500, 5);
 
