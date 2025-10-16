@@ -13,7 +13,7 @@
         - 생성자 내부의 this로 호출되는 변수는 필드로 자동 선언
         Java 생성자: 클래스명과 동일
 
-  - getAverrageScore() 메서드 구현
+  - getAverageScore() 메서드 구현
     : 학생 평균 성적 계산
     ? Object.value(), rudece() 사용
   
