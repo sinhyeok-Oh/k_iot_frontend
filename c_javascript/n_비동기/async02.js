@@ -7,12 +7,12 @@ function greet (name) {
 
 // ? 메인 함수
 // : 사용자의 입력을 처리하는 함수
-function getUsrInput (callback) {
+function getUserInput (callback) {
 //   let name = prompt ('이름을 입력해주세요.');
 //   callback(name)
 }
 
-getUsrInput(greet);
+getUserInput(greet);
 
 // ! 콜백 함수를 사용하느 비동기 요청 예시
 // : 서버와의 통신
@@ -36,7 +36,7 @@ function fetchUserData(userId, callback) {
 
 // 사용자 데이터 처리 함수
 function handleUserData(user, callback) {
-  console.log(`User Data: ${user, name}`);
+  console.log(`User Data: ${user.name}`);
 
   // 콜백 함수 내에서 함수 실행 후 동작시킬 코드
   // : 중첩된 콜백함수
