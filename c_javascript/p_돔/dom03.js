@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 생성된 태그 조작
   header.textContent = '문서 객체를 동적으로 생성';
-  header.setAttribute('data-cutom', '사용자 저으이 속성');
+  header.setAttribute('data-cutom', '사용자 정의 속성');
   header.style.color = 'white';
   header.style.backgroundColor = 'black';
 
