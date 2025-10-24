@@ -73,7 +73,21 @@
 //          : 로컬의 실행 파일을 찾아서 전역 설치
 //             (타입스크립트 전역 설치 완료 시 tsc --init 만 입력해도 가능)
 
-// ! tsconfig.json 내부 구조
+/*
+{
+  ! package.json (npm init -Y 버전)
+  "name": "e_typescript", // ? 프로젝트의 이름 설정 (기본값 - 현재 디렉터리 이름)
+  "version": "1.0.0",     // ? 프로젝트 시작 버전
+  "description": "",      // ? 프로젝트 간단한 설명
+  "main": "index.js",     // ? 진입점 JS 파일 (빌드 결과 기준)
+  "scripts": {            // ? npm run 명령어 정의 (npm 명령어로 프로젝트 실행, 테스트, 빌드 가능)
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],         // ? 검색 키워드
+  "author": "",           // ? 작성자
+  "license": "ISC"        // ? 라이선스 종류
+}
+*/
 
 // 5. 타입스크립트 코드 컴파일 및 실행
 // tsc(typescript comlier)
