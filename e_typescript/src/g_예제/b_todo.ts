@@ -27,3 +27,22 @@ interface TodoItem {
   task: string;
   completed: boolean;
 }
+
+//^ 2. 요구 사항 정리 (map & filter 사용)
+// 1) 특정 id를 가진 Todo 항목의 task를 편집하는 함수(editTodo)
+// 2) 완료된 Todo 항목을 모두 삭제하는 함수(clearCompleted)
+// 3) 모든 Todo 항목을 조회하는 함수(getAllTodos)
+// 4) 특정 상태(completed)에 따라 Todo 항목을 필터링하는 함수(filterTodos)
+// 5) 특정 id를 가진 Todo 항목의 completed 상태를 토글하는 함수(toggleTodo)
+// 6) 모든 Todo 항목의 completed 상태를 일괄적으로 설정하는 함수(setAllTodosCompletion)
+
+//^ 3. 프로그램 구현
+function editTodo(todos: TodoItem[], task: string): TodoItem {
+  const newTodo: TodoItem ={
+    
+  }
+}
+
+
+//^ 4. 프로그램 실행
+let todos: TodoItem[] = [];
