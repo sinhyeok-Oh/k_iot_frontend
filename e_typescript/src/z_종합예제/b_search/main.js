@@ -1,4 +1,4 @@
-// https://jsonpalceholder.typicode.com/users
+// main.ts
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -45,14 +45,14 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
     return to.concat(ar || Array.prototype.slice.call(from));
 };
 var _this = this;
-// 3. 사용자 정보를 외부 API에서 가져오는 비동기 함수
-var fetchUesrs = function () { return __awaiter(_this, void 0, void 0, function () {
+//@ 3. 사용자 정보를 외부 API에서 가져오는 비동기 함수
+var fetchUsers = function () { return __awaiter(_this, void 0, void 0, function () {
     var response, users, e_1;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
                 _a.trys.push([0, 3, , 4]);
-                return [4 /*yield*/, fetch('https://jsonpalceholder.typicode.com/users')];
+                return [4 /*yield*/, fetch('https://jsonplaceholder.typicode.com/users')];
             case 1:
                 response = _a.sent();
                 if (!response.ok) {
@@ -70,13 +70,13 @@ var fetchUesrs = function () { return __awaiter(_this, void 0, void 0, function 
         }
     });
 }); };
-// 4. 사용자 정보를 받아 HTML 요소를 생성하는 함수
+//@ 4. 사용자 정보를 받아 HTML 요소를 생성하는 함수
 var createUserCard = function (user) {
     var userCard = document.createElement('div');
     userCard.innerHTML = "\n    <h2>".concat(user.name, "</h2>\n    <p>Username: ").concat(user.username, "</p>\n    <p>Email: ").concat(user.email, "</p>\n  ");
     return userCard;
 };
-// 5. 사용자 정보 배열을 받아 화면에 표시하는 함수
+//@ 5. 사용자 정보 배열을 받아 화면에 표시하는 함수
 // : createUserCard에 각 객체 전달
 var displayUsers = function (users) {
     var userList = document.getElementById('user-list');
@@ -88,7 +88,7 @@ var displayUsers = function (users) {
         });
     }
 };
-// 6. 사용자 정보 필터링하는 함수
+//@ 6. 사용자 정보 필터링하는 함수
 // : 사용자로부터 입력받은 검색어 사용
 // - 사용자의 name, username, email 중 하나라도 포함된 경우 출력
 var filterUsers = function (users, query) {
@@ -98,8 +98,8 @@ var filterUsers = function (users, query) {
             || user.email.toLowerCase().includes(query.toLowerCase());
     });
 };
-// 7. 사용자 정보 정렬하는 함수
-// : Name 또는 Email 기분으로 정렬 (오름차순)
+//@ 7. 사용자 정보 정려하는 함수
+// : Name 또는 Email 기준으로 정렬 (오름차순)
 var sortUsers = function (users, key) {
     // map, filter: 배열 메서드, 새로운 배열 반환
     // cf) sort: 배열 요소 정렬 (+ 콜백 함수, 새로운 배열 반환 X)
@@ -112,30 +112,39 @@ var sortUsers = function (users, key) {
     // : 비교 함수
     // - 문자열을 비교하는 메서드 (알파벳 순 정렬에 유용)
     // - 반환값
-    //    - 1) 기준 문자열(a)이 비교 문자열(b)보다 앞에 있음
-    //      0) 두 문자열이 같음
-    //      1) 기존 문자열이 비교 문자열보다 뒤에 있음
-    return __spreadArray([], users, true).sort(function (a, b) { return a[key].localeCompare; }, are(b[key]));
+    //    -1) 기준 문자열(a)이 비교 문자열(b)보다 앞에 있음
+    //     0) 두 문자열이 같음
+    //     1) 기존 문자열이 비교 문자열보다 뒤에 있음
+    return __spreadArray([], users, true).sort(function (a, b) { return a[key].localeCompare(b[key]); });
 };
-// ! 이벤트 리스터 추가 함수
+//! 이벤트 리스너 추가 함수
 var addEventListener = function (users) {
     var searchInput = document.getElementById('search-input');
     var sortSelect = document.getElementById('sort-select');
-    searchInput.addEventListener('input', function () {
+    var dataFilterAndSort = function () {
+        // 데이터 필터링
         var query = searchInput.value;
         var filteredUsers = filterUsers(users, query);
         // 필터링 된 데이터 정렬
         var sortKey = sortSelect.value;
         var sortedUsers = sortUsers(filteredUsers, sortKey);
         displayUsers(sortedUsers);
-    });
+    };
     searchInput.addEventListener('input', dataFilterAndSort);
     sortSelect.addEventListener('change', dataFilterAndSort);
 };
-// ! 초기화 함수
-var init = function () {
-    var users = yield fetchUesrs();
-    displayUsers(users);
-    addEventListener(users);
-};
+//! 초기화 함수
+var init = function () { return __awaiter(_this, void 0, void 0, function () {
+    var users;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, fetchUsers()];
+            case 1:
+                users = _a.sent();
+                displayUsers(users);
+                addEventListener(users);
+                return [2 /*return*/];
+        }
+    });
+}); };
 document.addEventListener('DOMContentLoaded', init);
