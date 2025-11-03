@@ -30,6 +30,7 @@ function State02() {
 
     let inputValue = e.target.value; // 이벤트 객체의 target 속성 === 이벤트가 발생한 input 태그
     setInputValue(inputValue);
+
     console.log(inputValue);
   }
 
@@ -92,7 +93,7 @@ function State02() {
         <option value="야구">야구</option>
       </select>
       <br />
-      <p>Input value: {inputValue}</p>
+      <p>Input Value: {inputValue}</p>
       <button onClick={handleResetClick}>초기화 버튼</button>
 
       <h5>여러 개의 입력 상태 관리</h5>

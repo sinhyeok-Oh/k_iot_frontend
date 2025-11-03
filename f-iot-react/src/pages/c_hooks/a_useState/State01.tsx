@@ -22,9 +22,7 @@ import React, { useState } from 'react'
 // - 제네릭<type>으로 타입 명시 가능
 //  >> useState<User>({ name: '이승아', age: 29 });
 
-
 // const [state, setState]({ name: '이승아', age: 29 }); - 사용 X
-
 
 function State01() {
   // ? 기본 구조와 명명 규칙

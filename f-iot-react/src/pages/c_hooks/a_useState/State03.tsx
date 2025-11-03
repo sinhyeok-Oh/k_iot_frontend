@@ -19,7 +19,8 @@ import React, { useState } from 'react'
 function State03() {
   // === Hooks ===
   const [count, setCount] = useState<number>(0);
-
+  // const count = 0;
+  // const setCount = () => {}
   const [name, setName] = useState<string>('');
   const [enter, setEnter] = useState<string>('');
   
