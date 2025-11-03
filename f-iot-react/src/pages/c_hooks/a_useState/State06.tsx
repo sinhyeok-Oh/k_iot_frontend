@@ -53,17 +53,15 @@ function State06() {
       <input 
       type="text" 
       name='name' 
-      value={name} o
-      nChange={handleInputChange}
-      />
-
-      <input 
-      type="text" 
-      name='height' 
-      value={height} 
+      value={name} 
       onChange={handleInputChange}
       />
-      
+      <input 
+      type="text" 
+      name='height'
+      value={height}
+      onChange={handleInputChange}
+      />
       <button onClick={handleUserInfoSubmit}>전송</button>
       <State06_Child userData={submittedData} />
     </div>

@@ -82,7 +82,7 @@ function State05() {
 
       {/* 배열: 배열 요소 추가 */}
       <p>Items: {items}</p>
-      <button onChange={handleAddItem}>아이템 추가</button>
+      <button onClick={handleAddItem}>아이템 추가</button>
       
 
 
