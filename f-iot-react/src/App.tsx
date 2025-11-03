@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css'
 import Basic from '@/pages/a_basic'; 
 import RoutePages from '@/pages/b_Route';
-import Hooks from '@/pages/c_hooks/';
+import Hooks from '@/pages/c_hooks';
 
 import Navibar from './components/Navbar';
 import PostList from './_practice/a_basic/PostList';

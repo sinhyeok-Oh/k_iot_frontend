@@ -8,7 +8,7 @@ interface Login {
   password: string;
 }
 
-const loginInitialVale: Login = {
+const loginInitialValue: Login = {
   id: '',
   password: ''
 }
@@ -19,7 +19,7 @@ function State02() {
 
   // const [id, setId] = useState<string>('');
   // const [password, setPassword] = useState<string>('');
-  const [login, setLogin] = useState<Login>(loginInitialVale);
+  const [login, setLogin] = useState<Login>(loginInitialValue);
 
   const { id, password } = login; // 구조 분해 할당
 
@@ -58,7 +58,6 @@ function State02() {
       // 변경하고자 하는 name 키를 가진 value 값을 변경 (해당 필드만 값 업데이트)
       [name]: value // name, value (X)
     });
-    
   }
 
   const handleLonginSubmit = (e: React.FormEvent) => {
@@ -67,14 +66,13 @@ function State02() {
     console.log('폼 데이터가 제출 되었습니다.', login);
 
     // 데이터에 대한 활용(제출, 사용) 후에는 초기화가 필수
-    setLogin(loginInitialVale);
+    setLogin(loginInitialValue);
     
   }
 
   const handleResetLogin = () => {
-    setLogin(loginInitialVale);
+    setLogin(loginInitialValue);
   }
-
 
   return (
     <div>
@@ -99,24 +97,24 @@ function State02() {
 
       <h5>여러 개의 입력 상태 관리</h5>
       <form onSubmit={handleLonginSubmit}>
-      <input 
-      type="text" 
-      name='id'
-      value={login.id}
-      placeholder='아이디'
-      onChange={handleLoginChange}
-      />
-      <input 
-      type="text" 
-      name='password'
-      value={login.password}
-      placeholder='비밀번호'
-      onChange={handleLoginChange}
-      />
+        <input 
+        type="text" 
+        name='id'
+        value={login.id}
+        placeholder='아이디'
+        onChange={handleLoginChange}
+        />
+        <input 
+        type="text" 
+        name='password'
+        value={login.password}
+        placeholder='비밀번호'
+        onChange={handleLoginChange}
+        />
 
-      <p>아이디: {id} / 비밀번호: {password}</p>
-      <button type='button' onClick={handleResetLogin}>초기화</button>
-      <button type='submit'>전송하기</button>
+        <p>아이디: {id} / 비밀번호: {password}</p>
+        <button type='button' onClick={handleResetLogin}>초기화</button>
+        <button type='submit'>전송하기</button>
       </form>
     </div>
   )
