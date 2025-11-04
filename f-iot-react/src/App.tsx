@@ -26,7 +26,6 @@ function App() {
           - 중첩된 자식 라우트 인식
         */}
         <Route path='/route/*' element={<RoutePages />} />
-
         <Route  path='/hooks' element={<Hooks />} />
 
         <Route path='/practice/post' element={<PostList />} />
