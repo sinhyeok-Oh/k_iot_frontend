@@ -23,7 +23,6 @@ function State02() {
 
   const { id, password } = login; // 구조 분해 할당
 
-
   // * === EVENT HANDLER === //
   const handleInputChange = (e:React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     // input 창에 change 변화가 일어나면 처리(handle)할 로직

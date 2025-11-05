@@ -4,17 +4,17 @@ import Basic from '@/pages/a_basic';
 import RoutePages from '@/pages/b_Route';
 import Hooks from '@/pages/c_hooks';
 
-import Navibar from './components/Navbar';
+import Navibar from './components/Navibar';
 import PostList from './_practice/a_basic/PostList';
 import PostDetail from './components/PostDetail';
-
+import SearchApp from './_practice/c_hooks/SearchApp';
 // 파일명 없으면 무조건! 해당 파일의 index 라는 이름의 파일을 가져옴
 
 function App() {
   return (
     <>
       {/* 경로와 상관없이 렌더링 */}
-      <h1>Korea IoT React</h1>
+      <h3>Korea IoT React</h3>
       <Navibar />
 
       {/* Routes 태그: Route를 감싸는 컴포넌트 */}
@@ -26,10 +26,12 @@ function App() {
           - 중첩된 자식 라우트 인식
         */}
         <Route path='/route/*' element={<RoutePages />} />
-        <Route  path='/hooks' element={<Hooks />} />
+        <Route path='/hooks' element={<Hooks />} />
 
+        {/* //@ _practice 실습 코드 */}
         <Route path='/practice/post' element={<PostList />} />
         <Route path='/practice/post/:id' element={<PostDetail />} />
+        <Route path='/practice/search' element={<SearchApp /> } />
 
       </Routes>
     </>

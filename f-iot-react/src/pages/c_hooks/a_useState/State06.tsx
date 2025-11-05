@@ -50,6 +50,11 @@ function State06() {
 
   return (
     <div>
+      {/* 
+        전체 선택: ctrl + a 
+        -> 
+        코드 정렬: ctrl + k + f 
+      */}
       <input 
       type="text" 
       name='name' 
@@ -65,7 +70,7 @@ function State06() {
       <button onClick={handleUserInfoSubmit}>전송</button>
       <State06_Child userData={submittedData} />
     </div>
-  )
+  );
 }
 
 export default State06

@@ -52,7 +52,6 @@ function State03() {
     setEnter(e.target.value);
   }
 
-
   return (
     <div>
       <h5>이벤트 객체의 여러 타입</h5>

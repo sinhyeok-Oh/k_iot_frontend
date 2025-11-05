@@ -63,8 +63,6 @@ function Ref01() {
     // # 11) 화면이 아니라 '개발자 도구 콘솔창'에 출력
     // : React가 렌더링하기 전에 JS 코드가 실행
     console.log(lengthVar);
-    
-    
   }
 
   return (

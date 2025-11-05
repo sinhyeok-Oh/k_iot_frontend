@@ -18,11 +18,11 @@ function Practice02() {
   const messageEndRef = useRef<HTMLDivElement>(null);
 
   // ? messages 값이 갱신될 때마다 콜백 함수 실행
-  useEffect(() => {
+  // useEffect(() => {
     // behavior 속성: 이동 효과를 설정
     // block 속성: 스크롤 맞춤 설정 (end: 하단 맞춤, center: 중앙 맞춤)
-    messageEndRef.current?.scrollIntoView({ behavior: 'smooth', block: 'end'})
-  }, [messages]);
+  //   messageEndRef.current?.scrollIntoView({ behavior: 'smooth', block: 'end'})
+  // }, [messages]);
 
   // 메시지 1 ~ 메시지 15의 유사 배열을 실제 배열에 변환
 
@@ -30,7 +30,6 @@ function Practice02() {
     const newMessage = `메시지 ${messages.length + 1}`;
     setMessages(prev => [...prev, newMessage]);
   }
-
 
   return (
     <>

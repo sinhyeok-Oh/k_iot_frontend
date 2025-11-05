@@ -26,7 +26,6 @@ const Button = memo(({ handleClick }: { handleClick: () => void }) => {
   return <button onClick={handleClick}>자식 컴포넌트 버튼</button>
 });
 
-
 // 부모 컴포넌트
 function A_UseCallback() {
   // === Hooks ===
@@ -58,13 +57,9 @@ function A_UseCallback() {
 
   console.log('부모 렌더링');
   
-
-
   let a = 10; // 컴포넌트 재렌더링마다 새롭게 초기화 + 할당
   function example() { // 컴포넌트 재렌더링마다 함수값이 새롭게 할당
-
   }
-
 
   return (
     <div>
