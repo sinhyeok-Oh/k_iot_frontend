@@ -28,6 +28,7 @@ function Index() {
       <h1 style={{ backgroundColor: 'black', color: 'white' }}>
         === 리액트 Hooks ===
       </h1>
+      
       <ToggleSection title="1. 리액트 Hooks - useState">
         <State01 /> <hr />
         <State02 /> <hr />
@@ -50,7 +51,6 @@ function Index() {
         <Effect_Practice01 /> <hr />
       </ToggleSection>
 
-      
       <ToggleSection title="4. 리액트 Hooks - useCallback">
         <A_UseCallback /> <hr />
         <B_UseMemo /> <hr />
@@ -71,7 +71,10 @@ function Index() {
         <TodoAppLocalStorage />
       </ToggleSection>
 
-
+      <ToggleSection title="7. 리액트 Hooks - Webcam">
+        <p>Webcam</p>
+        {/* <Webcam /> */}
+      </ToggleSection>
     </div>
   );
 }

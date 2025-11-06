@@ -3,6 +3,7 @@ import './App.css'
 import Basic from '@/pages/a_basic'; 
 import RoutePages from '@/pages/b_Route';
 import Hooks from '@/pages/c_hooks';
+import HTTP from '@/pages/d_http';
 
 import Navibar from './components/Navibar';
 import PostList from './_practice/a_basic/PostList';
@@ -32,21 +33,24 @@ function App() {
         */}
         <Route path='/route/*' element={<RoutePages />} />
         <Route path='/hooks' element={<Hooks />} />
+        <Route path='/http' element={<HTTP />} />
 
         {/* //@ _practice 실습 코드 */}
         <Route path='/practice/post' element={<PostList />} />
         <Route path='/practice/post/:id' element={<PostDetail />} />
         <Route path='/practice/search' element={<SearchApp /> } />
 
-        {/* //@ pages/b_Route - Z_실습 보드 */}
+        {/* //@ pages/b_Route - Z_실습 코드 */}
+        {/* 절대경로 */}
         <Route path='/' element={<Navigate to="/products" />} />
         <Route path='/products' element={<Z_Products />} />
         <Route path='/products/:id' element={<Z_ProductDetail />}>
-        {/* 중첩 라우트 */}
+          {/* 중첩 라우트: 상대경로 */}
           <Route path='info' element={<Z_ProductInfo />} />
           <Route path='reviews' element={<Z_ProductReviews />} />
         </Route>
-      <Route path='dashboard' element={<Z_Dashboard />} />
+        <Route path='/dashboard' element={<Z_Dashboard />} />
+        
       </Routes>
     </>
   )

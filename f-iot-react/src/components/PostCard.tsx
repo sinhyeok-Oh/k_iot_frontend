@@ -2,7 +2,6 @@ import React from 'react';
 import type { Post } from '@/types/Post'
 import { Link } from 'react-router-dom';
 
-
 //! PostCardProps 타입 정의
 interface PostCardProps {
   post: Post;
