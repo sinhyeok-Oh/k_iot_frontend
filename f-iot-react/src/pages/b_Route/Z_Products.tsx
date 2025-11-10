@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, useLocation, useSearchParams } from 'react-router-dom';
-import './Z_Products.css';
+import './Z_Product.css';
 
 //! === 상품 관련 Route 실습 예제 ===
 

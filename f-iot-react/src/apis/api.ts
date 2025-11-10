@@ -43,7 +43,7 @@ export const api: AxiosInstance = axios.create({
 */
 
 //! 요청 인터셉터: 토큰 자동 삽입
-// api.interceptors.request.use(요청설정이헹, 요청설정에러);
+// api.interceptors.request.use(요청설정이행, 요청설정에러);
 api.interceptors.request.use((config: InternalAxiosRequestConfig) => {
   const token = localStorage.getItem('accessToken');
   if (token && config.headers) {

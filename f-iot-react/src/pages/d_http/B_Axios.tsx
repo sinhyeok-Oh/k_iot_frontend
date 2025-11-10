@@ -1,6 +1,7 @@
 import React from 'react'
 import PostForm from './PostForm';
 import axios from 'axios';
+import PostList from './PostList';
 
 //! Axios
 // : 브아우저 Node.js 환경에서 HTTP  요청을 쉽게 처리할 수 있게 도와주는
@@ -23,6 +24,7 @@ import axios from 'axios';
 
 // - POST) const response = await axios.post();
 //  >> data (서버로 전송할 JSON 데이터)
+
 // & 2) 기본 설정(커스텀 Axios 인스턴스를 생성하는 함수)
 // - 기본 axios 사용 대신
 //  , 프로젝트 전반에서 공통적으로 설정을 미리 지정 가능
@@ -55,7 +57,7 @@ function B_Axios() {
       <h1>게시판 CRUD 예제 (Axios/localStorage)</h1>
       <PostForm />
       <hr />
-      <PostForm />
+      <PostList />
     </div>
   )
 }
